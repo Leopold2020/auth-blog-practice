@@ -6,6 +6,11 @@ export default defineConfig({
   out: './drizzle',
   dialect: 'postgresql',
   dbCredentials: {
-    url: process.env.DATABASE_URL!,
+    user: "middleware_watcher",
+    host: "localhost",
+    database: "events_practice",
+    password: "123",
+    port: 5432,
+    ssl: false,
   },
 })

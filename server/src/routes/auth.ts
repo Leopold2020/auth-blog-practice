@@ -16,7 +16,10 @@ router.post('/signup', async (req, res) => {
 
  try {
     // 1. Hämta email och password från body
+    console.log("test")
     const { email, password } = req.body;
+
+    console.log(password.typeOf())
 
     // 2. Hasha lösenorden  med bcrypt.hash
      const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
