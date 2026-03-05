@@ -22,6 +22,7 @@ import { useForm } from "react-hook-form";
     });
 
     const data = await res.json();
+    console.log(data)
 
     if (!res.ok) {
       setError("name", data.error ?? "Något gick fel");

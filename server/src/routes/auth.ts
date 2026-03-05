@@ -4,9 +4,10 @@ import { users } from "../db/schema"
 import { eq } from "drizzle-orm"
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
-
-
+import dotenv from "dotenv"
 const router = Router();
+
+dotenv.config();
 
 const SALT_ROUNDS = 10;
 const JWT_SECRET = process.env.JWT_SECRET!;
@@ -16,12 +17,11 @@ router.post('/signup', async (req, res) => {
 
  try {
     // 1. Hämta email och password från body
-    console.log("test")
     const { email, password } = req.body;
 
-    console.log(password.typeOf())
 
     // 2. Hasha lösenorden  med bcrypt.hash
+    console.log(email, password)
      const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
 
     // 3. Spara det hashade lösenordet och email till db

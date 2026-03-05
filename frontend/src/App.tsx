@@ -22,8 +22,8 @@ function App() {
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/signup" element={<SignUpPage/>} />
         <Route element={<ProtectedRoute />}>
-        {/* <Route path="/posts/new" element={<CreatePostPage />} />
-        <Route path="/posts/:id/edit" element={<EditPostPage />} /> */}
+        <Route path="/posts/new" element={<CreatePostPage />} />
+        <Route path="/posts/:id/edit" element={<EditPostPage />} /> 
       </Route>
       </Routes>
     </BrowserRouter>

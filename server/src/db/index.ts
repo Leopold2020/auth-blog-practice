@@ -12,9 +12,9 @@ import { Pool } from "pg";
 import { drizzle } from "drizzle-orm/node-postgres";
 
 const pool = new Pool({
-  user: "events_manager",
+  user: "middleware_watcher",
   host: "localhost",
-  database: "middleware_watcher",
+  database: "middleware_practice",
   password: "123",
   port: 5432,
 });

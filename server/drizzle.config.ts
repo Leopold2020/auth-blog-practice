@@ -8,7 +8,7 @@ export default defineConfig({
   dbCredentials: {
     user: "middleware_watcher",
     host: "localhost",
-    database: "events_practice",
+    database: "middleware_practice",
     password: "123",
     port: 5432,
     ssl: false,

@@ -50,7 +50,7 @@ function SignUpPage() {
       <form onSubmit={handleSubmit}>
          
         <label htmlFor="email">Email</label>
-        <input type="text" id="email" name="email" onChange={handleEmail}/>
+        <input type="email" id="email" name="email" onChange={handleEmail}/>
         <label htmlFor="password">password</label>
         <input type="password" id="password" name="password" onChange={handlePassword}/>
         
